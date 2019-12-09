@@ -1,0 +1,6 @@
+H:\C# EPAM COURSE\1_Classes\Inharitance\bin\Debug\Inharitance.dll
+H:\C# EPAM COURSE\1_Classes\Inharitance\bin\Debug\Inharitance.pdb
+H:\C# EPAM COURSE\1_Classes\Inharitance\obj\Debug\Inharitance.csprojAssemblyReference.cache
+H:\C# EPAM COURSE\1_Classes\Inharitance\obj\Debug\Inharitance.csproj.CoreCompileInputs.cache
+H:\C# EPAM COURSE\1_Classes\Inharitance\obj\Debug\Inharitance.dll
+H:\C# EPAM COURSE\1_Classes\Inharitance\obj\Debug\Inharitance.pdb
