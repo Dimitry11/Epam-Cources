@@ -37,6 +37,10 @@ namespace Runner
                     case 13: tasks.Task_13(); break;
                     case 14: tasks.Task_14(); break;
                     case 15: tasks.Task_15(); break;
+                    case 16: tasks.Task_16(); break;
+                    case 17: tasks.Task_17(); break;
+                    case 18: tasks.Task_18(); break;
+                    case 19: tasks.Task_19(); break;
                     default:tasks.Default(); break;
                 }
             } while (choice != 0);
@@ -48,26 +52,32 @@ namespace Runner
         {
             int choice = 0;
             Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("\n\t\t\t\t\t\t The Topic - 'Classes': ");
+            Console.WriteLine("\n\t\t\t\t\t\t The Topic - '1. Classes': ");
             Console.WriteLine("1 - Area & Perieter of the Rectangle");
             Console.WriteLine("2 - Area & Perieter of the Rectangle (using Auto-Implemented Properties)");
             Console.WriteLine("3 - Circle. Output Length & Area of a Circle");
             Console.WriteLine("4 - 1st & 3rd of the tasks Using Static classes");
             Console.WriteLine("5 - ComplexNumber");
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("\n\t\t\t\t\t\t The Topic - 'Inheritance': ");
+            Console.WriteLine("\n\t\t\t\t\t\t The Topic - '2. Inheritance': ");
             Console.WriteLine("6. Figure: Square & Rectangle(Draw())");
             Console.WriteLine("7. Figure: ReadOnly");
             Console.WriteLine("8. Figure: Using Virtual Method");
             Console.WriteLine("9. Figure: Add IDrawable");
             Console.ForegroundColor = ConsoleColor.DarkRed;
-            Console.WriteLine("\n\t\t\t\t\t\t The Topic - 'Collections': ");
+            Console.WriteLine("\n\t\t\t\t\t\t The Topic - '3. Collections': ");
             Console.WriteLine("10. Person: Output - name, age, phone number");
             Console.WriteLine("11. Person: Add two persons");
             Console.WriteLine("12. Person: DisplayName() pageNumber");
             Console.WriteLine("13. Class ArrayList 1");
             Console.WriteLine("14. Class ArrayList 2 (Prime elements)");
             Console.WriteLine("15. Class ArrayList 3 (Main operations)");
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine("\n\t\t\t\t\t\t The Topic - '4. Properties': ");
+            Console.WriteLine("16. Class TV (set volume)");
+            Console.WriteLine("17. Class rectungle (side1, side2)");
+            Console.WriteLine("18. Class Book (nameBook, ganre, agePublish, year)");
+            Console.WriteLine("19. Class Vector (PushBack, PopBack, Insert, etc..)");
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("\n\n\t\t\t\t\t\t Please make your choice...");
             try

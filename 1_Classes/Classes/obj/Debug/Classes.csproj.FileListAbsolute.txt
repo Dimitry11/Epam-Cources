@@ -4,3 +4,9 @@ H:\C# EPAM COURSE\1_Classes\Classes\obj\Debug\Classes.csprojAssemblyReference.ca
 H:\C# EPAM COURSE\1_Classes\Classes\obj\Debug\Classes.csproj.CoreCompileInputs.cache
 H:\C# EPAM COURSE\1_Classes\Classes\obj\Debug\Classes.dll
 H:\C# EPAM COURSE\1_Classes\Classes\obj\Debug\Classes.pdb
+H:\C# EPAM COURSE\Epam-Cources\1_Classes\Classes\bin\Debug\Classes.dll
+H:\C# EPAM COURSE\Epam-Cources\1_Classes\Classes\bin\Debug\Classes.pdb
+H:\C# EPAM COURSE\Epam-Cources\1_Classes\Classes\obj\Debug\Classes.csprojAssemblyReference.cache
+H:\C# EPAM COURSE\Epam-Cources\1_Classes\Classes\obj\Debug\Classes.csproj.CoreCompileInputs.cache
+H:\C# EPAM COURSE\Epam-Cources\1_Classes\Classes\obj\Debug\Classes.dll
+H:\C# EPAM COURSE\Epam-Cources\1_Classes\Classes\obj\Debug\Classes.pdb

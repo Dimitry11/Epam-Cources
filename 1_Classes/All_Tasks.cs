@@ -8,6 +8,7 @@
     using System.Threading;
     using System.Collections;
     using System.Collections.Generic;
+    using Properties;
 
     class All_Tasks
     {
@@ -509,7 +510,6 @@
         {
             Console.Clear();
             ArrayList myAarrayList = new ArrayList();
-            MyownClass myObj = new MyownClass("Hello C#!");
 
             byte _byte = 255;
             myAarrayList.Add(234235);   // int
@@ -518,7 +518,6 @@
             myAarrayList.Add("string"); // string
             myAarrayList.Add(_byte);    // byte
             myAarrayList.Add(true);     // bool
-            myAarrayList.Add(myObj);    // class(custumer type)
 
             foreach (object item in myAarrayList)
                 Console.WriteLine($"{item.GetType()}: {item}");
@@ -656,19 +655,264 @@
                 }
             } while (choice != 0);
         }
-    }
 
-    class MyownClass
-    {
-        public string str;
-        public MyownClass(string str)
+        public void Task_16()
         {
-            this.str = str;
+            TV tv = new TV();
+            Console.Write("Enter TV volume range 0 - 100: ");
+            tv.Volume = double.Parse(Console.ReadLine());
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            string result = tv.Volume == 0 ? "Your value doesnt Entered in this Range 1-100" : $"{tv.Volume}";
+            Console.WriteLine($"\n\nYour volume is:{result}");
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("\n\n\t\t\t\t\t       Press any Key to continue..");
+            Console.ReadKey();
+            Console.ResetColor();
         }
 
-        public override string ToString()
+        public void Task_17()
         {
-            return $"Your string is - {str}";
+            Console.Write("Imput side1: ");
+            double side1 = double.Parse(Console.ReadLine());
+            Console.Write("Imput side2: ");
+            double side2 = double.Parse(Console.ReadLine());
+            Rectangle4 rect = new Rectangle4(side1, side2);
+            Console.WriteLine($"Area is: {rect.Area}\nPerimetr is{rect.Perimetr}");
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("\n\n\t\t\t\t\t       Press any Key to continue..");
+            Console.ReadKey();
+            Console.ResetColor();
+        }
+
+        public void Task_18()
+        {
+            Book[] books = new Book[]
+            {
+                new Book("The Time Machine", "Herbert George Wells", "Fantastic", 1895),
+                new Book("C# 8 VIA CLR", "A.Troelsen", "Programming", 2018),
+                new Book("C# 4.0", "Herbert Shild", "Science", 2007),
+                new Book("Clear Code", "Steve McConnel", "Programming", 2010),
+                new Book("C++", "Bern Straustrup", "Documentary", 1981)
+            };
+                HomeLibrary library = new HomeLibrary(books);
+            int choice = 0;
+            do
+            {
+                Console.Clear();
+                Console.WriteLine("1 - Add New Book in Home Library");
+                Console.WriteLine("2 - Search Book By Name");
+                Console.WriteLine("3 - Search Book By Author");
+                Console.WriteLine("4 - Search Book By Genre");
+                Console.WriteLine("5 - Search Book By Year Publishing");
+                Console.WriteLine("6 - Delete Book");
+                Console.WriteLine("7 - Show All Books");
+                Console.WriteLine("0 - Exit");
+                Console.Write("Please make your choice..");
+                choice = int.Parse(Console.ReadLine());
+                switch (choice)
+                {
+                    case 1:
+                        Console.Clear();
+
+                        Console.Write("Enter book name: ");
+                        string nameBook = Console.ReadLine();
+
+                        Console.Write("Enter book author: ");
+                        string author = Console.ReadLine();
+
+                        Console.Write("Enter book ganre: ");
+                        string ganre = Console.ReadLine();
+
+                        Console.Write("Enter book year of publish: ");
+                        int year = int.Parse(Console.ReadLine());
+
+                        Book newBook = new Book(nameBook, author, ganre, year);
+                        library.AddBook(newBook);
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write("\n\n\t\t\t\t\t       Press any Key to continue..");
+                        Console.ReadKey();
+                        Console.ResetColor();
+                        break;
+                    case 2:
+                        Console.Clear();
+                        Console.Write("\nEnter name of the Book: ");
+                        string name = Console.ReadLine();
+                        library.SerchByName(name);
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write("\n\n\t\t\t\t\t       Press any Key to continue..");
+                        Console.ReadKey();
+                        Console.ResetColor();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        Console.Write("\nEnter author of the Book: ");
+                        string author1 = Console.ReadLine();
+                        library.SerchByAuthor(author1);
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write("\n\n\t\t\t\t\t       Press any Key to continue..");
+                        Console.ReadKey();
+                        Console.ResetColor();
+                        break;
+                    case 4:
+                        Console.Clear();
+                        Console.Write("\nEnter ganre of the Book: ");
+                        string ganre1 = Console.ReadLine();
+                        library.SerchByGanre(ganre1);
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write("\n\n\t\t\t\t\t       Press any Key to continue..");
+                        Console.ReadKey();
+                        Console.ResetColor();
+                        break;
+                    case 5:
+                        Console.Clear();
+                        Console.Write("\nEnter year of publishing of the Book: ");
+                        int years = int.Parse(Console.ReadLine());
+                        library.SerchByYear(years);
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write("\n\n\t\t\t\t\t       Press any Key to continue..");
+                        Console.ReadKey();
+                        Console.ResetColor();
+                        break;
+                    case 6:
+                        try
+                        {
+                            library.DeleteBook();
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine("The last book was deleted successfully!");
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.Write("\n\n\t\t\t\t\t       Press any Key to continue..");
+                            Console.ReadKey();
+                            Console.ResetColor();
+                        }
+                        catch 
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("Something went wrong...book was NOT deleted ...! ");
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.Write("\n\n\t\t\t\t\t       Press any Key to continue..");
+                            Console.ReadKey();
+                            Console.ResetColor();
+                            Console.ResetColor();
+                        }
+                        break;
+                    case 7:
+                        Console.Clear();
+                        library.Print_all_info();
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write("\n\n\t\t\t\t\t       Press any Key to continue..");
+                        Console.ReadKey();
+                        Console.ResetColor();
+                        break;
+                    default:
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine($"This number doesn't exist...Try again!");
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write("\n\n\t\t\t\t\t       Press any Key to continue..");
+                        Console.ReadKey();
+                        Console.ResetColor();
+                        break;
+                }
+
+            } while (choice != 0);         
+        }
+
+        public void Task_19()
+        {
+            int choice = 0;
+            Console.Clear();
+            Console.Write("Enter size of an Array: ");
+            int size = int.Parse(Console.ReadLine());
+            Vector vector = new Vector(size);
+            do
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine(new string('-', 120));
+                vector.Print();
+                Console.WriteLine("\n\n"+new string('-', 120));
+                Console.ResetColor();
+                Console.WriteLine("1 - PushBack – добавляет элемент в конец вектора;");
+                Console.WriteLine("2 - PopBack – удаляет элемент с конца вектора");
+                Console.WriteLine("3 - Insert – вставляет элемент в нужную позицию");
+                Console.WriteLine("4 - Erase – удаляет элемент с нужной позиции");
+                Console.WriteLine("5 - Empty – делает проверку, пустой ли вектор");
+                Console.WriteLine("6 - At – возвращает значение элемента, индекс которого принимает метод");
+                Console.WriteLine("7 - Reverse – делает реверс вектора");
+                Console.WriteLine("8 - Clear – очищает вектор");
+                Console.WriteLine("9 - Fill all element to random");
+                Console.WriteLine("0 - Exit application");
+                Console.Write("Please make your choice...");
+                choice = int.Parse(Console.ReadLine());
+                switch (choice)
+                {
+                    case 1:
+                        Console.Write("Enter element for add in Array: ");
+                        int element = int.Parse(Console.ReadLine());
+                        vector.PushBack(element);
+                        Console.Clear();
+                        break;
+                    case 2:
+                        vector.PopBack();
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Write("Enter position: ");
+                        int position = int.Parse(Console.ReadLine());
+                        Console.Write("Enter element: ");
+                        int elem = int.Parse(Console.ReadLine());
+                        vector.Insert(position, elem);
+                        Console.Clear();
+                        break;
+                    case 4:
+                        Console.Write("Enter position for delete: ");
+                        int posDel = int.Parse(Console.ReadLine());
+                        vector.Erase(posDel);
+                        Console.Clear();
+                        break;
+                    case 5:
+                        Console.Clear();
+                        if (vector.Empty() == true)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("THis Array is Empty... Try Fill it!");
+                            Console.ResetColor();
+                        }
+                        else Console.WriteLine("This Array is NOT Empty!");
+                        break;
+                    case 6:
+                        Console.Clear();
+                        Console.Write("Enter index: ");
+                        int index = int.Parse(Console.ReadLine());
+                        Console.WriteLine($"\nIndex [{index}] = {vector.At(index)}");
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write("\n\n\t\t\t\t\t       Press any Key to continue..");
+                        Console.ReadKey();
+                        Console.ResetColor();
+                        break;
+                    case 7:
+                        vector.Reverse();
+                        Console.Clear();
+                        break;
+                    case 8:
+                        vector.Clear();
+                        Console.Clear();
+                        break;
+                    case 9:
+                        Console.Clear();
+                        vector.FillArrayRand();
+                        break;
+                    default:
+                        Console.ResetColor();
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine($"This number doesn't exist...Try again!");
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write("\n\n\t\t\t\t\t       Press any Key to continue..");
+                        Console.ReadKey();
+                        Console.ResetColor();
+                        break;
+                }
+            } while (choice != 0);
         }
     }
 }

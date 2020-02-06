@@ -1,0 +1,5 @@
+H:\C# EPAM COURSE\Epam-Cources\1_Classes\Collections\bin\Debug\Collections.dll
+H:\C# EPAM COURSE\Epam-Cources\1_Classes\Collections\bin\Debug\Collections.pdb
+H:\C# EPAM COURSE\Epam-Cources\1_Classes\Collections\obj\Debug\Collections.dll
+H:\C# EPAM COURSE\Epam-Cources\1_Classes\Collections\obj\Debug\Collections.pdb
+H:\C# EPAM COURSE\Epam-Cources\1_Classes\Collections\obj\Debug\3. Collections.csprojAssemblyReference.cache

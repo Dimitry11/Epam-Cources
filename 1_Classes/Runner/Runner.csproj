@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Descriptions\4. Properties" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Descriptions\3. Collections.txt" />
@@ -60,17 +61,21 @@
     <Content Include="Descriptions\2. Inheritance.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Classes\Classes.csproj">
+    <ProjectReference Include="..\Classes\1. Classes.csproj">
       <Project>{8a8d4ea7-7e8f-492f-a9e6-086a6830afc7}</Project>
-      <Name>Classes</Name>
+      <Name>1. Classes</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Collections\Collections.csproj">
+    <ProjectReference Include="..\Collections\3. Collections.csproj">
       <Project>{d4dbb1f5-aa17-4ccc-bdbe-b5d0129c9c69}</Project>
-      <Name>Collections</Name>
+      <Name>3. Collections</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Inharitance\Inharitance.csproj">
+    <ProjectReference Include="..\Inharitance\2. Inharitance.csproj">
       <Project>{868905f1-c5a7-4f9a-9ac1-72c511121fe8}</Project>
-      <Name>Inharitance</Name>
+      <Name>2. Inharitance</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Properties\4. Properties.csproj">
+      <Project>{1c2e3c08-1bd3-412e-b397-bff1c56629b0}</Project>
+      <Name>4. Properties</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

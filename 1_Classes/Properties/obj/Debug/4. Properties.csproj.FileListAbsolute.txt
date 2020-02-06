@@ -1,0 +1,5 @@
+H:\C# EPAM COURSE\Epam-Cources\1_Classes\Properties\bin\Debug\Properties.dll
+H:\C# EPAM COURSE\Epam-Cources\1_Classes\Properties\bin\Debug\Properties.pdb
+H:\C# EPAM COURSE\Epam-Cources\1_Classes\Properties\obj\Debug\4. Properties.csprojAssemblyReference.cache
+H:\C# EPAM COURSE\Epam-Cources\1_Classes\Properties\obj\Debug\Properties.dll
+H:\C# EPAM COURSE\Epam-Cources\1_Classes\Properties\obj\Debug\Properties.pdb
